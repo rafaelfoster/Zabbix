@@ -38,15 +38,20 @@ Graphs
 
 Installation
 ------------
-
-1. Install [`if.speed`](https://github.com/jjmartres/Zabbix/tree/master/zbx-scripts/if.speed) in the **ExternalScripts** directory of your Zabbix server and/or proxy. Check your `zabbix_server.conf` and/or `zabbix_proxy.conf` if in doubt.
-2. Then `chmod a+x if.speed`
-3. Install [`if.vdom`](https://github.com/jjmartres/Zabbix/tree/master/zbx-scripts/if.vdom) in the **ExternalScripts** directory of your Zabbix server and/or proxy. Check your `zabbix_server.conf` and/or `zabbix_proxy.conf` if in d>
-4. Then `chmod a+x if.vdom` 
-5. Import **zbx-fortinet-interfaces.xml** file into Zabbix.
-6. Add to your host the **{$SNMP_COMMUNITY}** macro with your SNMP community as value.
-7. Add to your host the **{$INTF_REGEXP}** macro with your regular expression as value (ex: -p-|-P-|-pe-|-PE-)
-8. Associate **ZBX-FORTINET-INTERFACES** template to the host.
+1. Add a value mapping named `fgifAdminStatus` with the following values:
+  * 1 => up
+  * 2 => down
+2. Add a value mapping named `fgifOperStatus` with the following values:
+  * 1 => up
+  * 2 => down
+3. Install [`if.speed`](https://github.com/jjmartres/Zabbix/tree/master/zbx-scripts/if.speed) in the **ExternalScripts** directory of your Zabbix server and/or proxy. Check your `zabbix_server.conf` and/or `zabbix_proxy.conf` if in doubt.
+4. Then `chmod a+x if.speed`
+5. Install [`if.vdom`](https://github.com/jjmartres/Zabbix/tree/master/zbx-scripts/if.vdom) in the **ExternalScripts** directory of your Zabbix server and/or proxy. Check your `zabbix_server.conf` and/or `zabbix_proxy.conf` if in d>
+6. Then `chmod a+x if.vdom` 
+7. Import **zbx-fortinet-interfaces.xml** file into Zabbix.
+8. Add to your host the **{$SNMP_COMMUNITY}** macro with your SNMP community as value.
+9. Add to your host the **{$INTF_REGEXP}** macro with your regular expression as value (ex: -p-|-P-|-pe-|-PE-)
+10. Associate **ZBX-FORTINET-INTERFACES** template to the host.
 
 ### Requirements
 

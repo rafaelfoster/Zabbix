@@ -87,7 +87,7 @@
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>SNMP interface status (ifAdminStatus)</name>
+                                <name>fgifAdminStatus</name>
                             </valuemap>
                         </item_prototype>
                         <item_prototype>
@@ -401,7 +401,7 @@
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>SNMP interface status (ifOperStatus)</name>
+                                <name>fgifOperStatus</name>
                             </valuemap>
                         </item_prototype>
                         <item_prototype>
