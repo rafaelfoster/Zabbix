@@ -135,7 +135,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>if.vdom[&quot;-d&quot;,&quot;{HOST.HOST}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;]</key>
+                            <key>if.vdom[&quot;-d&quot;,&quot;{HOST.IP}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -527,7 +527,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>if.speed[&quot;-d&quot;,&quot;{HOST.HOST}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;]</key>
+                            <key>if.speed[&quot;-d&quot;,&quot;{HOST.IP}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -563,7 +563,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.HOST}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)}&gt;0 &amp;  ({ZBX-FORTINET-INTERFACES:ifInOctets[{#SNMPVALUE}].avg(300)})&gt;({ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.HOST}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)})*0.8</expression>
+                            <expression>{ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.IP}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)}&gt;0 &amp;  ({ZBX-FORTINET-INTERFACES:ifInOctets[{#SNMPVALUE}].avg(300)})&gt;({ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.IP}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)})*0.8</expression>
                             <name>Incoming use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes</name>
                             <url/>
                             <status>0</status>
@@ -590,7 +590,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.HOST}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)}&gt;0 &amp; ({ZBX-FORTINET-INTERFACES:ifOutOctets[{#SNMPVALUE}].avg(300)})&gt;({ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.HOST}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)})*0.8</expression>
+                            <expression>{ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.IP}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)}&gt;0 &amp; ({ZBX-FORTINET-INTERFACES:ifOutOctets[{#SNMPVALUE}].avg(300)})&gt;({ZBX-FORTINET-INTERFACES:if.speed[&quot;-d&quot;,&quot;{HOST.IP}&quot;,&quot;-c&quot;,&quot;{$SNMP_COMMUNITY}&quot;,&quot;-s&quot;,&quot;{#SNMPINDEX}&quot;].last(0)})*0.8</expression>
                             <name>Outgoing use on interface {#SNMPVALUE} exceed 80% for the last 5 minutes</name>
                             <url/>
                             <status>0</status>
